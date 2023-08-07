@@ -12,3 +12,5 @@ print(list1)
 print(list2)
 sum = [[list1[i][j] + list2[i][j] for j in range(col)] for i in range(row)]
 print(sum)
+""" for x in sum:
+    print(sum) """
