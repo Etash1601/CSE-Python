@@ -12,6 +12,6 @@ for i in range(n):
 
 print(a)
 print(b)
-c = a+b
+c = a+b       # we can use - a.extend(b)
 c.sort()
 print(c)
