@@ -7,6 +7,9 @@
 # ordering is not maintained in set, so no indexing and slicing
 # Repeation also doesn't take place
 
+# frozenset() - modification isn't allowed
+#
+
 """
 n = int(input("Enter number of elements: "))
 s = set()
