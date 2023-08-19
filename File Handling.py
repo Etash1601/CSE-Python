@@ -1,4 +1,5 @@
-# procedure to open a file
+# Procedure to open a file
+
 # 1)
 f1 = open("note.txt","r")
 print("Name of the file: ",f1.name)
@@ -25,11 +26,13 @@ print(fcontent)
 # 4)
 f = open("sample1.txt","r+")
 fcontent = f.read()
+print(fcontent)
 f.close
 
-f = open("sample2.txt","w+")
-f.write(fcontent)
-f.close
+f2 = open("samplejjj.txt","w")
+f2.write(fcontent)
+f2.close()
 
 print("File Copied")
 
+# 5)
