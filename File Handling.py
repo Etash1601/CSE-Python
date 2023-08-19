@@ -36,3 +36,4 @@ f2.close()
 print("File Copied")
 
 # 5)
+# read no of characters, words and lines
