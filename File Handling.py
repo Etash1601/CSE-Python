@@ -21,3 +21,15 @@ f.close
 f = open("filesample.txt","r")
 fcontent = f.read()
 print(fcontent)
+
+# 4)
+f = open("sample1.txt","r+")
+fcontent = f.read()
+f.close
+
+f = open("sample2.txt","w+")
+f.write(fcontent)
+f.close
+
+print("File Copied")
+
