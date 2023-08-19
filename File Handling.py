@@ -13,3 +13,11 @@ f.seek(0) # to again read from the start
 flines = f.readlines()
 print(len(flines))
 f.close
+
+# 3)
+f = open("filesample.txt","w")
+f.write("Hello")
+f.close
+f = open("filesample.txt","r")
+fcontent = f.read()
+print(fcontent)
