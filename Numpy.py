@@ -36,3 +36,11 @@ newarr = arr.reshape(2,2,3)
 print(arr)
 print("\n")
 print(newarr)
+
+
+a = np.array([[1,2],[3,4]])
+b = np.array([[4,3],[2,1]])
+print("Original: ",a,b)
+print("Array sum: ",a+b)
+print("Array mul: ",a*b)
+print("Matrix mul: ",a.dot(b))
