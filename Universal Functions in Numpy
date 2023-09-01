@@ -1,0 +1,63 @@
+import numpy as np
+
+arr1 = np.array([1,2,3,4,5,6])
+arr2 = np.array([7,8,9,10,11,12])
+newarr1 = np.add(arr1,arr2)
+newarr2 = np.subtract(arr1,arr2)
+newarr3 = np.multiply(arr1,arr2)
+newarr4 = np.divide(arr1,arr2)
+newarr5 = np.mod(arr1,arr2)
+newarr6 = np.divmod(arr1,arr2)
+print("Add: ",newarr1)
+print("Subtract: ",newarr2)
+print("Multiply: ",newarr3)
+print("Divide: ",newarr4)
+print("Modulus: ",newarr5)
+print("Divide/Modulus: ",newarr6)
+
+# Linear Algebra with Numpy
+
+# 1D)
+a = np.array([1,2,3,4,5,6])
+b = np.array([7,8,9,10,11,12])
+result1 = a.dot(b)
+result2 = np.dot(a,b)
+result3 = np.vdot(a,b) # multiply same index element and sum them up
+print("a.dot(b): ",result1)
+print("np.dot(a,b): ",result2)
+print("np.vdot(a,b): ",result3)
+print("\n")
+
+# 2D)
+a = np.array([[1,2],[2,3]])
+b = np.array([[3,4],[5,6]])
+result1 = a.dot(b)
+result2 = np.dot(a,b)
+result3 = np.vdot(a,b)
+print("a.dot(b): ",result1)
+print("np.dot(a,b): ",result2)
+print("np.vdot(a,b): ",result3)
+print("\n")
+
+
+# AX = B
+
+# To find x we can do X = A^(-1)B
+A = np.array([[4,3],[-5,9]])
+B = np.array([20,26])
+A_inverse = np.linalg.inv(A) # gives inverse of array
+X = np.dot(A_inverse,B)
+print(X)
+
+# we can solve it without doing inverse of A separately
+A = np.array([[4,3],[-5,9]])
+B = np.array([20,26])
+X = np.linalg.solve(A,B)
+print(X)
+
+
+# Identity Matrix
+print(np.identity(3)) # '3' means 3x3
+
+# Determinant
+print(np.linalg.det(A))
