@@ -51,4 +51,15 @@ print(ser.idxmin())
 print(ser.count())
 
 # Summary Statistics
+sub = ["Maths","Science","STS","Language"]
+marks = [100,90,80,95]
+ser = pd.Series(marks, index=sub)
+print(ser,"\n")
 print(ser.describe())
+print(ser.unique())
+print(ser.nunique())
+print(ser.value_count())
+print(ser.dropna())
+
+# ser.loc["walk"]
+# ser.iloc[0] or ser.[0], ser[:2]
