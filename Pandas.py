@@ -39,7 +39,7 @@ print(ser.sort_values(ascending=False))
 # ranking values
 print(ser.rank(ascending=False))
 
-# Basic Statistice
+# Basic Statistics
 print(ser.sum())
 print(ser.mean())
 print(ser.median())
@@ -49,3 +49,6 @@ print(ser.idxmax())
 print(ser.min())
 print(ser.idxmin())
 print(ser.count())
+
+# Summary Statistics
+print(ser.describe())
