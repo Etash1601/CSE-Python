@@ -15,8 +15,14 @@ pd.date_range(start='2/2/2019', periods=8) # no. of days = 8
 d = {'date': ['3/10/2000','3/11/2000','3/12/2000'], 'value': [2,3,4]}
 df = pd.DataFrame(d)
 print(df)
-df['date'] = pd.to_datetime(df['date'])
+df['date'] = pd.to_datetime(df['date'])  # and  (,format="%Y-%d-%m %H:%M:%S")
 print(df)
+
+# Ignore/Coerce Errors
+df['date'] = pd.to_datetime(df['date'], errors='ignore')
+df
+df['date'] = pd.to_datetime (df['date'], errors='coerce!)
+df
 
 # Find the age
 df = pd.DataFrame({'name': ['Tom','Andy','Lucas','Pranav','Uma','Rahu','Kumar','Varun'],
@@ -29,18 +35,25 @@ df['month'] = df['dob'].dt.month
 df['day'] = df['dob'].dt.day
 df
 
+# Get age from date of birth
 today = pd.to_datetime('today')
 df['age'] = today.year - df['dob'].dt.year
 print(df)
 
-#
+# Setting Index
 df = df.set_index(['dob'])
 print(df)
 
 
-# select data with specific year and perform aggregation
+# Select data with specific year and perform aggregation
 df.loc['1997']
 df.loc['1997','age'].sum()
+df['1995'].groupby('month').sum()
+df.loc['1995-12']
 
 cond = df.index.month == 11
 df[cond]  # only prints for 11th month
+
+
+# Select data between two dates
+df.loc['1995' : '1997']
