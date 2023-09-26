@@ -49,9 +49,18 @@ plt.axis('equal')
 plt.show()
 
 # Plot Histogram
+x = [value1, value2, value3,....]
+plt.hist(x, bins-number of bins)
+plt.show(
 
 # Plot Correlation Matrix using Seaborn
+data = {'A': [45, 37, 42, 35, 39], B': [38, 31, 26, 28, 33], 'C': [10, 15, 17, 21, 12]}
+df = pd.DataFrame(data)
+print(df)
+corr_matrix = df.corr()
+print(corr_matrix)
 # Heat Map
-
 import seaborn as sn
 import matplotlib.pyplot as plt
+sn.heatmap(corr_matrix, annot=True)
+plt.show()
